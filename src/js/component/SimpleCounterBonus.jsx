@@ -1,8 +1,8 @@
-// 1. importo React y los Hooks
+
 import React, { useState, useEffect }from "react";
 
 
-// 2. Creando mi componente tipo funcion
+
 function SimpleCounterBonus() {
   // Todo código JS
   const [isActive, setIsActive] = useState(false);
@@ -22,7 +22,7 @@ function SimpleCounterBonus() {
   };
 
   const handleStart = () => {
-    setIsActive(!isActive);  // ! significa negación, cambiando de True a False o viceversa.
+    setIsActive(!isActive);  
     if (countDown) {
       setStatus({
         icon: "fas fa-history",
@@ -55,9 +55,6 @@ function SimpleCounterBonus() {
   }
 
 
-  // tiene dos parámetros,
-  // el primero es una funcion,
-  // el segundo es un array (es opcional)
   useEffect(() => {
     if (isActive) {
       const nIntervalId = setInterval(() => {
@@ -78,7 +75,7 @@ function SimpleCounterBonus() {
   }, [isActive, counter, countDown]);
 
 
-  // 4. Retorno un solo elemento HTML
+
   return (
     <div>
       <h1 className="text-center mt-5">{"Simple Counter"}</h1>
@@ -118,5 +115,5 @@ function SimpleCounterBonus() {
 };
 
 
-// 5. Exporto mi componetente
+
 export default SimpleCounterBonus;
